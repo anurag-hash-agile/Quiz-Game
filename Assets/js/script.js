@@ -46,12 +46,12 @@ function showQuestion() {
     inputs[i].checked = false;
   }
   time = 10;
-  document.getElementById("timer").textContent = "Time: " + time;
+  document.getElementById("timer").textContent = `Time:${time};`
   
   clearInterval(timer);
   timer = setInterval(function() {
     time = time - 1;
-    document.getElementById("timer").textContent = "Time: " + time;
+    document.getElementById("timer").textContent =  `Time:${time};`
     if (time <= 0) {
       clearInterval(timer);
       nextQuestion();
@@ -71,15 +71,17 @@ function nextQuestion() {
       }
     }
   }
-  document.getElementById("score").textContent = "Score: " + score;
+  document.getElementById("score").textContent = `Score:${score};`
   currentQuestion = currentQuestion + 1;
   showQuestion();
 }
 
 function endQuiz() {
   document.getElementById("question").textContent = "Quiz Finished!";
-  document.getElementById("options").innerHTML = "<h3>Total Score: " + score + "/" + questions.length + "</h3>";
+  document.getElementById("options").innerHTML = `<h3>Total Score: ${score}/${questions.length}</h3>`;
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("timer").style.display = "none";
 }
-document.getElementById("next-btn").addEventListener("click", nextQuestion);
+nextbutton .addEventListener("click", nextQuestion);
+
+let nextbutton = document.getElementById("next-btn");
