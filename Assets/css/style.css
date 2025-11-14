@@ -81,15 +81,13 @@ label{
   font-size: 20px;
   font-weight: bold;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-
-  /* animation for slide down */
   transform: translateY(-100%);
   transition: transform 0.5s ease;
 }
 
 .popup.show {
   display: block;
-  transform: translateY(0);    /* slide down into view */
+  transform: translateY(0);  
 }
 
 #restart{
@@ -102,4 +100,7 @@ label{
   cursor: pointer;
   width: 100%;
   font-size: 20px;
+}
+#restart:hover{
+  background-color: rebeccapurple;
 }
