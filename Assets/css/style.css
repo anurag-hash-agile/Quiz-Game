@@ -43,6 +43,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-size: 20px;
 }
 #next-btn:hover { background-color: #0056b3; }
 
@@ -54,11 +55,11 @@ body {
 #time { color: red; }
 
 .popup {
-  display: none;               /* hidden by default */
+  display: none;              
   position: fixed;
-  top: 0;                      /* stick to top */
+  top: 0;                      
   left: 0;
-  width: 100%;                 /* full width ribbon */
+  width: 100%;                 
   background: #007bff;
   color: white;
   padding: 15px;
@@ -75,4 +76,16 @@ body {
 .popup.show {
   display: block;
   transform: translateY(0);    /* slide down into view */
+}
+
+#restart{
+  display:none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
 }

@@ -80,6 +80,13 @@ function endQuiz() {
   document.getElementById("options").innerHTML = `<h3>Total Score: ${score}/${questions.length}</h3>`;
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("timer").style.display = "none";
+  document.getElementById("restart").style.display = "block";
+  document.getElementById("restart").addEventListener("click", function () {
+    location.reload();
+});
+
 }
+
+
 let nextbutton = document.getElementById("next-btn");
 nextbutton .addEventListener("click", nextQuestion);
