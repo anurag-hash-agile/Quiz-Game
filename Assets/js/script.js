@@ -7,7 +7,7 @@ const questions = [
   {
     question: "What will console.log(2 + '2') show?",
     answers: ["22", "4", "NaN", "undefined"],
-    correct: 1 
+    correct: 0 
   },
   {
     question: "What is typeof 42?",
@@ -46,12 +46,11 @@ function showQuestion() {
     inputs[i].checked = false;
   }
   time = 10;
-  document.getElementById("timer").textContent = `Time:${time};`
+  document.getElementById("timer").textContent = `Time:${time}`
   
-  clearInterval(timer);
   timer = setInterval(function() {
     time = time - 1;
-    document.getElementById("timer").textContent =  `Time:${time};`
+    document.getElementById("timer").textContent =  `Time:${time}`
     if (time <= 0) {
       clearInterval(timer);
       nextQuestion();
@@ -71,7 +70,7 @@ function nextQuestion() {
       }
     }
   }
-  document.getElementById("score").textContent = `Score:${score};`
+  document.getElementById("score").textContent = `Score:${score}`
   currentQuestion = currentQuestion + 1;
   showQuestion();
 }
@@ -82,6 +81,5 @@ function endQuiz() {
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("timer").style.display = "none";
 }
-nextbutton .addEventListener("click", nextQuestion);
-
 let nextbutton = document.getElementById("next-btn");
+nextbutton .addEventListener("click", nextQuestion);
